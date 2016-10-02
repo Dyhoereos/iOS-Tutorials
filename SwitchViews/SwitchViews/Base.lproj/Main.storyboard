@@ -18,9 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-BH-hnw">
-                                <frame key="frameInset" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-BH-hnw">
                                 <items>
                                     <barButtonItem title="Switch Views" id="vzI-Rp-x5V">
                                         <connections>
@@ -31,6 +29,11 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Efh-BH-hnw" secondAttribute="bottom" id="cBr-D7-9tn"/>
+                            <constraint firstItem="Efh-BH-hnw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sSE-Ip-llu"/>
+                            <constraint firstAttribute="trailing" secondItem="Efh-BH-hnw" secondAttribute="trailing" id="vgC-nh-mcX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -48,9 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-CN-aL4">
-                                <frame key="frameInset" minX="134" minY="309" width="106" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-CN-aL4">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Press Me">
                                     <color key="titleColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,6 +62,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.22107159018452638" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r8Y-CN-aL4" firstAttribute="centerX" secondItem="F8U-qX-aHU" secondAttribute="centerX" id="1UL-A3-4aZ"/>
+                            <constraint firstItem="r8Y-CN-aL4" firstAttribute="centerY" secondItem="F8U-qX-aHU" secondAttribute="centerY" id="BE5-hU-HIf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fs-G0-3CJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -79,9 +84,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5y-ba-fhY">
-                                <frame key="frameInset" minX="134" minY="309" width="106" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5y-ba-fhY">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Press Me">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,6 +95,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.76446752416242558" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y5y-ba-fhY" firstAttribute="centerY" secondItem="2PW-au-YSg" secondAttribute="centerY" id="Ha8-xM-1gY"/>
+                            <constraint firstItem="Y5y-ba-fhY" firstAttribute="centerX" secondItem="2PW-au-YSg" secondAttribute="centerX" id="WjA-a8-s2Q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQW-2R-ika" userLabel="First Responder" sceneMemberID="firstResponder"/>
