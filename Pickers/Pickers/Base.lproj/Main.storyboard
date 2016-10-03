@@ -22,6 +22,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNV-MU-PPK">
                                 <connections>
                                     <outlet property="dataSource" destination="xsb-Vf-heD" id="OBp-FH-MMZ"/>
+                                    <outlet property="delegate" destination="xsb-Vf-heD" id="o9S-aH-tlc"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd5-fu-dxT">
@@ -61,13 +62,37 @@
                     <view key="view" contentMode="scaleToFill" id="hqt-bV-RQq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F46-CI-ge1">
+                                <connections>
+                                    <outlet property="dataSource" destination="akd-Zq-6D4" id="gfq-Vy-YuX"/>
+                                    <outlet property="delegate" destination="akd-Zq-6D4" id="1qb-VL-ZAz"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s7-Ri-RyJ">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="akd-Zq-6D4" eventType="touchDragInside" id="Y04-Iq-AOD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F46-CI-ge1" secondAttribute="trailing" id="3tA-pI-lbN"/>
+                            <constraint firstItem="F46-CI-ge1" firstAttribute="leading" secondItem="hqt-bV-RQq" secondAttribute="leading" id="4zs-ft-FMY"/>
+                            <constraint firstItem="8s7-Ri-RyJ" firstAttribute="centerY" secondItem="hqt-bV-RQq" secondAttribute="centerY" id="5MJ-ZN-FZp"/>
+                            <constraint firstItem="F46-CI-ge1" firstAttribute="top" secondItem="hqt-bV-RQq" secondAttribute="top" id="ajc-3l-IHM"/>
+                            <constraint firstItem="8s7-Ri-RyJ" firstAttribute="centerX" secondItem="hqt-bV-RQq" secondAttribute="centerX" id="eOi-ZI-aXV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="Wop-ot-h05"/>
+                    <connections>
+                        <outlet property="doublePicker" destination="F46-CI-ge1" id="4qd-u5-bFH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6X-9f-D20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1070" y="499"/>
+            <point key="canvasLocation" x="-1068" y="521.28935532233891"/>
         </scene>
         <!--Dependent-->
         <scene sceneID="UKi-T2-JNc">
