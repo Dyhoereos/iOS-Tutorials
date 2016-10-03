@@ -97,7 +97,7 @@
         <!--Dependent-->
         <scene sceneID="UKi-T2-JNc">
             <objects>
-                <viewController id="W8S-Mb-VHN" customClass="DependentComponentPickerViewController" sceneMemberID="viewController">
+                <viewController id="W8S-Mb-VHN" customClass="DependentComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jlp-2l-ENU"/>
                         <viewControllerLayoutGuide type="bottom" id="LEK-FE-55l"/>
@@ -105,13 +105,38 @@
                     <view key="view" contentMode="scaleToFill" id="Y3Q-zw-8tq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLe-ux-SWn">
+                                <connections>
+                                    <outlet property="dataSource" destination="W8S-Mb-VHN" id="JMM-Uc-zva"/>
+                                    <outlet property="delegate" destination="W8S-Mb-VHN" id="1Hi-l3-scS"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-uj-qZz">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="W8S-Mb-VHN" eventType="touchUpInside" id="3m8-1Q-WtV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xO2-uj-qZz" firstAttribute="centerX" secondItem="Y3Q-zw-8tq" secondAttribute="centerX" id="1Yo-i8-lz9"/>
+                            <constraint firstItem="JLe-ux-SWn" firstAttribute="leading" secondItem="Y3Q-zw-8tq" secondAttribute="leading" id="QiM-9g-acD"/>
+                            <constraint firstAttribute="trailing" secondItem="JLe-ux-SWn" secondAttribute="trailing" id="Ro7-XD-w3j"/>
+                            <constraint firstItem="JLe-ux-SWn" firstAttribute="top" secondItem="Y3Q-zw-8tq" secondAttribute="top" id="kB7-iP-nlp"/>
+                            <constraint firstItem="xO2-uj-qZz" firstAttribute="centerY" secondItem="Y3Q-zw-8tq" secondAttribute="centerY" id="whs-dx-FlG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="dependenticon" id="vJS-qK-0mU"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="JLe-ux-SWn" id="1Rl-bc-JgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZmT-zV-rGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1092" y="-1051"/>
+            <point key="canvasLocation" x="-1092" y="-1051.1244377811095"/>
         </scene>
         <!--Date-->
         <scene sceneID="bAU-53-qXC">
@@ -186,8 +211,8 @@
                         <segue destination="qs6-cg-aYQ" kind="relationship" relationship="viewControllers" id="ieh-hP-qsl"/>
                         <segue destination="xsb-Vf-heD" kind="relationship" relationship="viewControllers" id="Ll3-nH-MZL"/>
                         <segue destination="akd-Zq-6D4" kind="relationship" relationship="viewControllers" id="py8-qf-Q5W"/>
-                        <segue destination="W8S-Mb-VHN" kind="relationship" relationship="viewControllers" id="Dw2-f5-mCk"/>
                         <segue destination="vWE-Tj-OgC" kind="relationship" relationship="viewControllers" id="N9g-Hw-STU"/>
+                        <segue destination="W8S-Mb-VHN" kind="relationship" relationship="viewControllers" id="1Ve-Ta-Nn5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ef3-kf-Wbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
