@@ -2,7 +2,7 @@
 //  BlueViewController.swift
 //  SwitchViews
 //
-//  Created by arcui on 2016-10-02.
+//  Created by Dyhoer on 2016-10-02.
 //  Copyright © 2016 Dyhoer. All rights reserved.
 //
 
