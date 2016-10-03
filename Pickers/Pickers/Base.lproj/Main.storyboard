@@ -190,13 +190,52 @@
                     <view key="view" contentMode="scaleToFill" id="6g4-5f-gau">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nym-ig-M6Q">
+                                <connections>
+                                    <outlet property="dataSource" destination="vWE-Tj-OgC" id="bg4-ma-Sz0"/>
+                                    <outlet property="delegate" destination="vWE-Tj-OgC" id="EEW-ET-7Fj"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0m-5J-T7x">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="stE-1U-yky"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="vWE-Tj-OgC" eventType="touchUpInside" id="Rh8-4X-Phq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i30-Cz-a5w">
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.23718189020936553" green="1" blue="0.6211628081265621" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i30-Cz-a5w" firstAttribute="centerX" secondItem="nym-ig-M6Q" secondAttribute="centerX" id="5ae-Ia-bej"/>
+                            <constraint firstItem="y7X-b7-B3t" firstAttribute="top" secondItem="e0m-5J-T7x" secondAttribute="bottom" constant="194" id="Kzg-0I-z12"/>
+                            <constraint firstAttribute="trailing" secondItem="nym-ig-M6Q" secondAttribute="trailing" id="Sbq-0a-CGA"/>
+                            <constraint firstItem="i30-Cz-a5w" firstAttribute="centerX" secondItem="6g4-5f-gau" secondAttribute="centerX" id="VUG-Mh-4fI"/>
+                            <constraint firstItem="nym-ig-M6Q" firstAttribute="top" secondItem="6g4-5f-gau" secondAttribute="top" id="XW4-Pe-MG4"/>
+                            <constraint firstItem="i30-Cz-a5w" firstAttribute="centerX" secondItem="e0m-5J-T7x" secondAttribute="centerX" id="bAW-53-rzd"/>
+                            <constraint firstItem="e0m-5J-T7x" firstAttribute="leading" secondItem="6g4-5f-gau" secondAttribute="leadingMargin" constant="87" id="bU7-6R-WzQ"/>
+                            <constraint firstItem="nym-ig-M6Q" firstAttribute="leading" secondItem="6g4-5f-gau" secondAttribute="leading" id="m1a-T1-tSQ"/>
+                            <constraint firstItem="i30-Cz-a5w" firstAttribute="top" secondItem="6g4-5f-gau" secondAttribute="top" constant="245" id="suy-Yp-fA8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="Szh-CV-4Ek"/>
+                    <connections>
+                        <outlet property="picker" destination="nym-ig-M6Q" id="1mN-pm-Qcw"/>
+                        <outlet property="spin" destination="e0m-5J-T7x" id="psN-Kj-CXH"/>
+                        <outlet property="winLabel" destination="i30-Cz-a5w" id="VVZ-GU-JBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLV-dZ-0EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="-1334"/>
+            <point key="canvasLocation" x="-226.40000000000001" y="-1334.4827586206898"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y0I-cS-E1M">
